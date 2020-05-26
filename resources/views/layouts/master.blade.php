@@ -9,6 +9,7 @@
     </head>
 
     <body>
+        @include('partials.header')
         @yield('content')
         @yield('scripts')
     </body>
