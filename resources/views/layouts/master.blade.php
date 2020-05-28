@@ -10,6 +10,7 @@
         <!-- CSRF Token -->
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
+        {{-- Title --}}
         <title>@yield('title')</title>
 
         <!-- Scripts -->
@@ -22,8 +23,17 @@
     </head>
 
     <body>
+
+        {{-- Navbar --}}
         @include('partials.header')
-        @yield('content')
+
+        {{-- Content --}}
+        <div class="container">
+
+            @yield('content')
+
+        </div>
+        
     </body>
 
 </html>
