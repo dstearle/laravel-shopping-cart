@@ -32,7 +32,7 @@
 
 				<div class="row px-3">
 
-					<div class="col-9 my-auto">$12</div>
+					<div class="col-9 my-auto price">$12</div>
 
 					<a href="#" class="btn btn-primary bg-success col-3">Add To Cart</a>
 
