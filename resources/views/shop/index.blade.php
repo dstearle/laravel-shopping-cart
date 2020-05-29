@@ -30,7 +30,13 @@
 
 				<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates a odit nemo sapiente. Eos, quo.</p>
 
-				<a href="#" class="btn btn-primary bg-success float-right">Add To Cart</a>
+				<div class="row px-3">
+
+					<div class="col-9 my-auto">$12</div>
+
+					<a href="#" class="btn btn-primary bg-success col-3">Add To Cart</a>
+
+				</div>
 
 			</div>
 
