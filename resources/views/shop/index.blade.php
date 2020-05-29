@@ -16,11 +16,10 @@
 
 			<div class="card-body">
 
-				<div class="row">
+				<div class="row thumbnail">
 
 					<img 
 						class="img-responsive mx-auto" 
-						style="max-height: 150px"
 						src="https://images-na.ssl-images-amazon.com/images/I/61GMn0FD3IL._SX361_BO1,204,203,200_.jpg" 
 						alt="Card image cap"
 					>
