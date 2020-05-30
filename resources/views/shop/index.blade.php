@@ -28,7 +28,7 @@
 
 				<h5 class="card-title">Product Title</h5>
 
-				<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates a odit nemo sapiente. Eos, quo.</p>
+				<p class="card-text description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates a odit nemo sapiente. Eos, quo.</p>
 
 				<div class="row px-3">
 
