@@ -10,12 +10,13 @@
 
 <div class="row">
 
-	<div class="col-sm-6">
+	<div class="col-sm-6 col-md-4">
 
 		<div class="card">
 
 			<div class="card-body">
 
+				{{-- Image --}}
 				<div class="row thumbnail">
 
 					<img 
@@ -26,15 +27,18 @@
 					
 				</div>
 
+				{{-- Title --}}
 				<h5 class="card-title">Product Title</h5>
 
+				{{-- Description --}}
 				<p class="card-text description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates a odit nemo sapiente. Eos, quo.</p>
 
+				{{-- Price & Add To Cart Button --}}
 				<div class="row px-3">
 
-					<div class="col-9 my-auto price">$12</div>
+					<div class="col-6 my-auto price">$12</div>
 
-					<a href="#" class="btn btn-primary bg-success col-3">Add To Cart</a>
+					<a href="#" class="btn btn-primary bg-success col-6">Add To Cart</a>
 
 				</div>
 
