@@ -6,12 +6,15 @@
 
         <div class="col-md-4 col">
 
+            {{-- Title --}}
             <h1>Sign Up</h1>
 
+            {{-- If errors exist dispaly error message --}}
             @if(count($errors) > 0)
 
                 <div class="alert alert-danger">
 
+                    {{-- Loops through all errors --}}
                     @foreach($errors->all() as $error)
 
                         <p>{{ $error }}</p>
@@ -22,8 +25,10 @@
 
             @endif
 
+            {{-- Form --}}
             <form method="post">
 
+                {{-- Email --}}
                 <div class="form-group">
 
                     <label for="email">Email</label>
@@ -32,6 +37,7 @@
 
                 </div>
 
+                {{-- Password --}}
                 <div class="form-group">
 
                     <label for="password">Password</label>
@@ -40,6 +46,7 @@
                     
                 </div>
 
+                {{-- Submit Button --}}
                 <button type="submit">Sign Up</button>
 
             </form>
