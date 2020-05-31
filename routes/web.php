@@ -17,7 +17,7 @@ Route::get('/', [
 ]);
 
 Route::get('/signup', [
-    'uses' => 'UserController@Signup',
+    'uses' => 'UserController@getSignup',
     'as' => 'user.signup'
 ]);
 

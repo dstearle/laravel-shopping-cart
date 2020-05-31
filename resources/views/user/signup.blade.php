@@ -1,45 +1,51 @@
-<div class="row">
+@extends('layouts.master')
 
-    <div class="col-md-4 col">
+@section('content')
 
-        <h1>Sign Up</h1>
+    <div class="row">
 
-        @if(count($errors) > 0)
+        <div class="col-md-4 col">
 
-            <div class="alert alert-danger">
+            <h1>Sign Up</h1>
 
-                @foreach($errors->all() as $error)
+            @if(count($errors) > 0)
 
-                    <p>{{ $error }}</p>
+                <div class="alert alert-danger">
 
-                @endforeach
+                    @foreach($errors->all() as $error)
 
-            </div>
+                        <p>{{ $error }}</p>
 
-        @endif
+                    @endforeach
 
-        <form method="post">
+                </div>
 
-            <div class="form-group">
+            @endif
 
-                <label for="email">Email</label>
+            <form method="post">
 
-                <input type="text" id="email" name="email">
+                <div class="form-group">
 
-            </div>
+                    <label for="email">Email</label>
 
-            <div class="form-group">
+                    <input type="text" id="email" name="email">
 
-                <label for="password">Password</label>
+                </div>
 
-                <input type="password" id="password" name="password">
-                
-            </div>
+                <div class="form-group">
 
-            <button type="submit">Sign Up</button>
+                    <label for="password">Password</label>
 
-        </form>
-        
+                    <input type="password" id="password" name="password">
+                    
+                </div>
+
+                <button type="submit">Sign Up</button>
+
+            </form>
+            
+        </div>
+
     </div>
 
-</div>
+@endsection
