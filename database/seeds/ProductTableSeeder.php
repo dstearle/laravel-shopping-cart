@@ -21,7 +21,7 @@ class ProductTableSeeder extends Seeder
 
         ]);
         // Saves the product to the database
-        $product-save();
+        $product->save();
 
         // Product 2
         // Creates a new product
@@ -33,7 +33,7 @@ class ProductTableSeeder extends Seeder
 
         ]);
         // Saves the product to the database
-        $product-save();
+        $product->save();
 
         // Product 3
         // Creates a new product
@@ -45,7 +45,7 @@ class ProductTableSeeder extends Seeder
 
         ]);
         // Saves the product to the database
-        $product-save();
+        $product->save();
 
         // Product 4
         // Creates a new product
@@ -57,7 +57,7 @@ class ProductTableSeeder extends Seeder
 
         ]);
         // Saves the product to the database
-        $product-save();
+        $product->save();
 
         // Product 5
         // Creates a new product
@@ -69,6 +69,6 @@ class ProductTableSeeder extends Seeder
 
         ]);
         // Saves the product to the database
-        $product-save();
+        $product->save();
     }
 }
