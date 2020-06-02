@@ -47,7 +47,7 @@
                 </div>
 
                 {{-- Submit Button --}}
-                <button type="submit">Sign Up</button>
+                <button class="btn btn-primary" type="submit">Sign Up</button>
 
             </form>
             
