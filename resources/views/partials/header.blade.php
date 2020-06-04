@@ -32,7 +32,7 @@
 				{{-- Dropdown --}}
 				<div class="dropdown-menu" aria-labelledby="navbarDropdown">
 
-					<a class="dropdown-item" href="#">Action</a>
+					<a class="dropdown-item" href="{{ route('user.signup') }}">Sign Up</a>
 
 					<a class="dropdown-item" href="#">Another action</a>
 
