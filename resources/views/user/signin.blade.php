@@ -26,7 +26,7 @@
             @endif
 
             {{-- Form --}}
-            <form method="post" action="{{ route('user.signup') }}">
+            <form method="post" action="{{ route('user.signin') }}">
 
                 {{-- Email --}}
                 <div class="form-group">

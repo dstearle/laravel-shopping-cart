@@ -11,11 +11,13 @@
 |
 */
 
+// Index Page
 Route::get('/', [
     'uses' => 'ProductController@getIndex',
     'as' => 'product.index'
 ]);
 
+// Sign Up Page
 Route::get('/signup', [
     'uses' => 'UserController@getSignup',
     'as' => 'user.signup'
@@ -26,3 +28,13 @@ Route::post('/signup', [
     'as' => 'user.signup'
 ]);
 
+// Sign In Page
+Route::get('/signin', [
+    'uses' => 'UserController@getSignin',
+    'as' => 'user.signin'
+]);
+
+Route::post('/signin', [
+    'uses' => 'UserController@postSignin',
+    'as' => 'user.signin'
+]);
