@@ -26,7 +26,7 @@
             @endif
 
             {{-- Form --}}
-            <form method="post">
+            <form method="post" action="{{ route('user.signup') }}">
 
                 {{-- Email --}}
                 <div class="form-group">
@@ -48,6 +48,8 @@
 
                 {{-- Submit Button --}}
                 <button class="btn btn-primary" type="submit">Sign Up</button>
+
+                {{ csrf_field() }}
 
             </form>
             
