@@ -34,7 +34,7 @@
 
 					<a class="dropdown-item" href="{{ route('user.signup') }}">Sign Up</a>
 
-					<a class="dropdown-item" href="#">Another action</a>
+					<a class="dropdown-item" href="{{ route('user.signin') }}">Sign In</a>
 
 					<div class="dropdown-divider"></div>
 
