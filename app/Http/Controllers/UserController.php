@@ -78,7 +78,11 @@ class UserController extends Controller
 
     public function getLogout() {
 
+        // Logs the user out
         Auth::logout();
+
+        // Directs user back to landing page
+        return redirect()->back();
 
     }
 
