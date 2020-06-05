@@ -34,8 +34,11 @@ class UserController extends Controller
         // Saves user to database
         $user->save();
 
-        // Redirect to product page
-        return redirect()->route('product.index');
+        // Logs the user in once they have signed up
+        Auth::login($user);
+
+        // Redirect new user to their profile
+        return redirect()->route('user.profile');
 
     }
 
