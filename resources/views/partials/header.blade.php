@@ -32,13 +32,23 @@
 				{{-- Dropdown --}}
 				<div class="dropdown-menu" aria-labelledby="navbarDropdown">
 
-					<a class="dropdown-item" href="{{ route('user.signup') }}">Sign Up</a>
+					{{-- If Use Is Logged In --}}
+					@if(Auth::check())
 
-					<a class="dropdown-item" href="{{ route('user.signin') }}">Sign In</a>
+						<a class="dropdown-item" href="{{ route('user.profile') }}">User Profile</a>
 
-					<div class="dropdown-divider"></div>
+						<div class="dropdown-divider"></div>
 
-					<a class="dropdown-item" href="{{ route('user.logout') }}">Logout</a>
+						<a class="dropdown-item" href="{{ route('user.logout') }}">Logout</a>
+
+					{{-- If User Is Not Logged In --}}
+					@else
+
+						<a class="dropdown-item" href="{{ route('user.signup') }}">Sign Up</a>
+
+						<a class="dropdown-item" href="{{ route('user.signin') }}">Sign In</a>
+
+					@endif
 					
 				</div>
 
