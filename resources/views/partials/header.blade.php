@@ -38,7 +38,7 @@
 
 					<div class="dropdown-divider"></div>
 
-					<a class="dropdown-item" href="#">Something else here</a>
+					<a class="dropdown-item" href="{{ route('user.logout') }}">Logout</a>
 					
 				</div>
 
