@@ -40,7 +40,7 @@ Route::post('/signin', [
 ]);
 
 // User Profile Page
-Route::get('/profile', [
+Route::get('/user/profile', [
     'uses' => 'UserController@getProfile',
     'as' => 'user.profile'
 ]);

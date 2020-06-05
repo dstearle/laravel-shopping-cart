@@ -68,4 +68,12 @@ class UserController extends Controller
 
     }
 
+    // User Profile Controls
+
+    public function getProfile() {
+
+        return view('user.profile');
+
+    }
+
 }
