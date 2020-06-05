@@ -20,33 +20,39 @@ Route::get('/', [
 // Sign Up Page
 Route::get('/signup', [
     'uses' => 'UserController@getSignup',
-    'as' => 'user.signup'
+    'as' => 'user.signup',
+    'middleware' => 'guest'
 ]);
 
 Route::post('/signup', [
     'uses' => 'UserController@postSignup',
-    'as' => 'user.signup'
+    'as' => 'user.signup',
+    'middleware' => 'guest'
 ]);
 
 // Sign In Page
 Route::get('/signin', [
     'uses' => 'UserController@getSignin',
-    'as' => 'user.signin'
+    'as' => 'user.signin',
+    'middleware' => 'guest'
 ]);
 
 Route::post('/signin', [
     'uses' => 'UserController@postSignin',
-    'as' => 'user.signin'
+    'as' => 'user.signin',
+    'middleware' => 'guest'
 ]);
 
 // User Profile Page
 Route::get('/user/profile', [
     'uses' => 'UserController@getProfile',
-    'as' => 'user.profile'
+    'as' => 'user.profile',
+    'middleware' => 'auth'
 ]);
 
 // Logout Page
 Route::get('/user/logout', [
     'uses' => 'UserController@getLogout',
-    'as' => 'user.logout'
+    'as' => 'user.logout',
+    'middleware' => 'auth'
 ]);
