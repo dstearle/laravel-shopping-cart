@@ -2,9 +2,10 @@
 
 namespace App\Http\Controllers;
 
+Use App\Cart;
 Use App\Product;
 use Illuminate\Http\Request;
-Use session;
+Use Session;
 
 class ProductController extends Controller
 {
@@ -29,6 +30,7 @@ class ProductController extends Controller
 
         // The session for your shopping cart
         $request->session()->put('cart', $cart);
+        // For testing shows data object
         dd($request->session()->get('cart'));
         // Redirects back to product index
         return redirect()->route('product.index');
