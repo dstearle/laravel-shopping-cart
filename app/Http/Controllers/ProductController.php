@@ -30,8 +30,10 @@ class ProductController extends Controller
 
         // The session for your shopping cart
         $request->session()->put('cart', $cart);
+        
         // For testing shows data object
-        dd($request->session()->get('cart'));
+        // dd($request->session()->get('cart'));
+
         // Redirects back to product index
         return redirect()->route('product.index');
 

@@ -17,9 +17,17 @@
 
 			{{-- Shopping Cart --}}
 			<li class="nav-item">
+
 				<a class="nav-link text-white" href="#">
+
+					{{-- Item Counter --}}
+					<span class="badge badge-danger">{{ Session::has('cart') ? Session::get('cart')->totalQty : '' }}</span>
+
+					{{-- Icon --}}
 					<i class="fas fa-shopping-cart"></i> Shopping Cart
+
 				</a>
+
 			</li>
 
 			{{-- User Account --}}
