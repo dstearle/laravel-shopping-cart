@@ -44,7 +44,7 @@
 
 								<div class="col-6 my-auto price">${{ $product->price }}</div>
 
-								<a href="#" class="btn btn-primary bg-success col-6">Add To Cart</a>
+								<a href="{{ route('product.addToCart', ['id' => $product->id]) }}" class="btn btn-primary bg-success col-6">Add To Cart</a>
 
 							</div>
 
