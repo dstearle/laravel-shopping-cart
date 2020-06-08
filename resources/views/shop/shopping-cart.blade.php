@@ -85,7 +85,20 @@
 
         </div>
 
+    {{-- Else display empty cart --}}
     @else
+
+        {{-- Checkout Button --}}
+        <div class="row">
+
+            <div class="col-sm-6 col-md-6">
+
+                <h2>No Items In Cart!</h2>
+
+            </div>
+
+        </div>
+
     @endif
 
 @endsection
