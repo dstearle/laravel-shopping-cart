@@ -11,6 +11,7 @@
     {{-- If cart has items --}}
     @if(Session::has('cart'))
 
+        {{-- Shopping Cart --}}
         <div class="row">
 
             <div class="col-sm-6 col-md-6">
@@ -55,6 +56,30 @@
                     @endforeach
 
                 </ul>
+
+            </div>
+
+        </div>
+
+        {{-- Totals Listing --}}
+        <div class="row">
+
+            <div class="col-sm-6 col-md-6">
+
+                <strong>Total: {{ $totalPrice }}</strong>
+
+            </div>
+
+        </div>
+
+        <hr>
+
+        {{-- Checkout Button --}}
+        <div class="row">
+
+            <div class="col-sm-6 col-md-6">
+
+                <button class="btn btn-success">Checkout</button>
 
             </div>
 
