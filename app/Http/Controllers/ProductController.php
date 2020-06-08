@@ -46,7 +46,7 @@ class ProductController extends Controller
         if(!Session::has('cart')) {
 
             // Returns the view for an empty shopping cart
-            return view('shop.shopping-cart', ['products' => null]);
+            return view('shop.shopping-cart');
 
         }
 
