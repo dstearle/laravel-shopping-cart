@@ -29,6 +29,12 @@ Route::get('/add-to-cart/{id}/', [
     'as' => 'product.addToCart'
 ]);
 
+// Checkout Page
+Route::get('/checkout', [
+    'uses' => 'ProductController@getCheckout',
+    'as' => 'checkout'
+]);
+
 // Sign Up Page
 Route::get('/signup', [
     'uses' => 'UserController@getSignup',

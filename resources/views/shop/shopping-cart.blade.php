@@ -79,7 +79,7 @@
 
             <div class="col-sm-6 col-md-6 offset-md-3 offset-sm-3">
 
-                <button class="btn btn-success">Checkout</button>
+                <a href="{{ route('checkout') }}" class="btn btn-success">Checkout</a>
 
             </div>
 
