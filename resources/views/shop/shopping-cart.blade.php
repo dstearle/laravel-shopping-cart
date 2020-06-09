@@ -14,7 +14,7 @@
         {{-- Shopping Cart --}}
         <div class="row">
 
-            <div class="col-sm-6 col-md-6">
+            <div class="col-sm-6 col-md-6 offset-md-3 offset-sm-3 mb-3">
 
                 <ul class="list-group">
 
@@ -24,17 +24,14 @@
                         {{-- Cart Item --}}
                         <li class="list-group-item">
 
-                            {{-- Item Quantity --}}
-                            <span class="badge">{{ $product['qty'] }}</span>
-
                             {{-- Item Title --}}
                             <strong>{{ $product['item']['title'] }}</strong>
 
                             {{-- Total Price --}}
-                            <span class="label label-success">{{ $product['price'] }}</span>
+                            <span class="badge badge-success">{{ $product['price'] }}</span>
 
                             {{-- Button --}}
-                            <button type="button" data-toggle="dropdown" class="btn btn-primary btn-xs dropdown-toggle">
+                            <button type="button" data-toggle="dropdown" class="btn btn-primary btn-sm dropdown-toggle">
                                 
                                 Action
 
@@ -51,6 +48,9 @@
 
                             </ul>
 
+                            {{-- Item Quantity --}}
+                            <span class="badge badge-primary">{{ $product['qty'] }}</span>
+
                         </li>
 
                     @endforeach
@@ -64,7 +64,7 @@
         {{-- Totals Listing --}}
         <div class="row">
 
-            <div class="col-sm-6 col-md-6">
+            <div class="col-sm-6 col-md-6 offset-md-3 offset-sm-3">
 
                 <strong>Total: {{ $totalPrice }}</strong>
 
@@ -77,7 +77,7 @@
         {{-- Checkout Button --}}
         <div class="row">
 
-            <div class="col-sm-6 col-md-6">
+            <div class="col-sm-6 col-md-6 offset-md-3 offset-sm-3">
 
                 <button class="btn btn-success">Checkout</button>
 

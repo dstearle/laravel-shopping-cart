@@ -28,7 +28,7 @@
         @include('partials.header')
 
         {{-- Content --}}
-        <div class="container">
+        <div class="container m-5">
 
             @yield('content')
 
