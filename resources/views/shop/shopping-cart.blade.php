@@ -91,7 +91,7 @@
         {{-- Checkout Button --}}
         <div class="row">
 
-            <div class="col-sm-6 col-md-6">
+            <div class="col-sm-6 col-md-6 offset-md-3 offset-sm-3 mb-3">
 
                 <h2>No Items In Cart!</h2>
 
