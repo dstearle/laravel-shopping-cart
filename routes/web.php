@@ -20,7 +20,7 @@ Route::get('/', [
 // Shopping Cart Page
 Route::get('/shopping-cart', [
     'uses' => 'ProductController@getCart',
-    'as' => 'product.shoppingCart'
+    'as' => 'product.shopping-cart'
 ]);
 
 // Add To Cart Page

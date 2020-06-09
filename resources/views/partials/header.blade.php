@@ -18,7 +18,7 @@
 			{{-- Shopping Cart --}}
 			<li class="nav-item">
 
-				<a class="nav-link text-white" href="product.shoppingCart">
+				<a class="nav-link text-white" href="{{ route('product.shopping-cart') }}">
 
 					{{-- Item Counter --}}
 					<span class="badge badge-danger">{{ Session::has('cart') ? Session::get('cart')->totalQty : '' }}</span>
