@@ -18,6 +18,121 @@
             {{-- Total --}}
             <h4>Your Total: ${{ $total }}</h4>
 
+            {{-- Form --}}
+            <form action="{{ route('checkout') }}" method="post" id="checkout-form">
+
+                <div class="row">
+
+                    {{-- Name --}}
+                    <div class="col-xs-12">
+
+                        <div class="form-group">
+
+                            <label for="name">Name</label>
+
+                            <input type="text" id="name" class="form-control" required>
+
+                        </div>
+
+                    </div>
+
+                    {{-- Address --}}
+                    <div class="col-xs-12">
+
+                        <div class="form-group">
+
+                            <label for="address">Address</label>
+
+                            <input type="text" id="address" class="form-control" required>
+
+                        </div>
+
+                    </div>
+
+                    {{-- Card Holder Name --}}
+                    <div class="col-xs-12">
+
+                        <div class="form-group">
+
+                            <label for="card-name">Card Holder Name</label>
+
+                            <input type="text" id="card-name" class="form-control" required>
+
+                        </div>
+
+                    </div>
+
+                    {{-- Credit Card Number --}}
+                    <div class="col-xs-12">
+
+                        <div class="form-group">
+
+                            <label for="card-number">Credit Card Number</label>
+
+                            <input type="text" id="card-number" class="form-control" required>
+
+                        </div>
+
+                    </div>
+
+                    {{-- Expiration Date --}}
+                    <div class="col-xs-12">
+
+                        <div class="row">
+
+                            {{-- Month --}}
+                            <div class="col-xs-6">
+
+                                <div class="form-group">
+
+                                    <label for="card-expiry-month">Expiration Month</label>
+
+                                    <input type="text" id="card-expiry-month" class="form-control" required>
+
+                                </div>
+
+                            </div>
+
+                            {{-- Year --}}
+                            <div class="col-xs-6">
+
+                                <div class="form-group">
+
+                                    <label for="card-expiry-year">Expiration Year</label>
+
+                                    <input type="text" id="card-expiry-year" class="form-control" required>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    {{-- CVC --}}
+                    <div class="col-xs-12">
+
+                        <div class="form-group">
+
+                            <label for="card-cvc">CVC</label>
+
+                            <input type="text" id="card-cvc" class="form-control" required>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                {{-- Protection --}}
+                {{ csrf_field() }}
+
+                {{-- Purchase Button --}}
+                <button type="submit" class="btn btn-success">Purchase</button>
+
+            </form>
+
         </div>
 
     </div>
