@@ -59,4 +59,27 @@ class ProductController extends Controller
         
     }
 
+    // Getter for the checkout page
+    public function getCheckout() {
+
+        // If the user has nothing in their cart
+        if(!Session::has('cart')) {
+
+            // Returns the view for an empty shopping cart
+            return view('shop.shopping-cart');
+
+        }
+
+        // Previosly selected items in cart
+        $oldCart = Session::get('cart');
+        // Updated cart with new items
+        $cart = new Cart($oldCart);
+        // The total cost
+        $total = $cart->totalPrice;
+
+        // Returns view for checkout page and passes on the total coast
+        return view('shop.checkout', ['total' => $total]);
+
+    }
+
 }
