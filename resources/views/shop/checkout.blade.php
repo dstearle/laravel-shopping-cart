@@ -16,7 +16,7 @@
             <h1>Checkout</h1>
 
             {{-- Total --}}
-            <h4>Your Total: ${{ $total }}</h4>
+            <h4 class="my-5">Your Total: ${{ $total }}</h4>
 
             {{-- Form --}}
             <form action="{{ route('checkout') }}" method="post" id="checkout-form">
@@ -24,7 +24,7 @@
                 <div class="row">
 
                     {{-- Name --}}
-                    <div class="col-xs-12">
+                    <div class="col-sm-12">
 
                         <div class="form-group">
 
@@ -37,7 +37,7 @@
                     </div>
 
                     {{-- Address --}}
-                    <div class="col-xs-12">
+                    <div class="col-sm-12">
 
                         <div class="form-group">
 
@@ -50,7 +50,7 @@
                     </div>
 
                     {{-- Card Holder Name --}}
-                    <div class="col-xs-12">
+                    <div class="col-sm-12">
 
                         <div class="form-group">
 
@@ -63,7 +63,7 @@
                     </div>
 
                     {{-- Credit Card Number --}}
-                    <div class="col-xs-12">
+                    <div class="col-sm-12">
 
                         <div class="form-group">
 
@@ -76,12 +76,12 @@
                     </div>
 
                     {{-- Expiration Date --}}
-                    <div class="col-xs-12">
+                    <div class="col-sm-12">
 
                         <div class="row">
 
                             {{-- Month --}}
-                            <div class="col-xs-6">
+                            <div class="col-sm-6">
 
                                 <div class="form-group">
 
@@ -94,7 +94,7 @@
                             </div>
 
                             {{-- Year --}}
-                            <div class="col-xs-6">
+                            <div class="col-sm-6">
 
                                 <div class="form-group">
 
@@ -111,7 +111,7 @@
                     </div>
 
                     {{-- CVC --}}
-                    <div class="col-xs-12">
+                    <div class="col-sm-12">
 
                         <div class="form-group">
 
