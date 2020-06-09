@@ -4,7 +4,7 @@
 
     <div class="row">
 
-        <div class="col-md-4 col">
+        <div class="col-sm-6 col-md-6 offset-md-3 offset-sm-3 mb-3">
 
             {{-- Title --}}
             <h1>Sign In</h1>
