@@ -35,6 +35,11 @@ Route::get('/checkout', [
     'as' => 'checkout'
 ]);
 
+Route::post('/checkout', [
+    'uses' => 'ProductController@postCheckout',
+    'as' => 'checkout'
+]);
+
 // Sign Up Page
 Route::get('/signup', [
     'uses' => 'UserController@getSignup',
