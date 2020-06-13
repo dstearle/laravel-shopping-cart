@@ -141,6 +141,9 @@
 
 @section('scripts')
 
+    {{-- Stripe API --}}
     <script src="https://js.stripe.com/v3/"></script>
+    {{-- Public JS --}}
+    <script src="{{ URL::to('src/js/checkout.js') }}"></script>
 
 @endsection
