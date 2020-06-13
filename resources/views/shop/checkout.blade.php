@@ -18,6 +18,13 @@
             {{-- Total --}}
             <h4 class="my-5">Your Total: ${{ $total }}</h4>
 
+            {{-- Error Alert --}}
+            <div id="change-error" class="alert alert-danger {{ !Session::has('error') ? 'hidden' : '' }}">
+
+                {{ Session::get('error') }}
+                
+            </div>
+
             {{-- Form --}}
             <form action="{{ route('checkout') }}" method="post" id="checkout-form">
 
