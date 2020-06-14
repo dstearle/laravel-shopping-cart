@@ -1,5 +1,5 @@
 // Stripe Publishable Key
-Stripe.setPublishableKey('pk_test_Z8Rr8NHqJmYA48M2FGGmpL3N');
+Stripe.setPublishableKey('pk_test_PnjIEA9AHoaVFTLT8xg3fBXH00OBARq10n');
 
 // Form Variable
 var $form = $('#checkout-form');
