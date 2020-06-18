@@ -24,15 +24,27 @@
 
     <body>
 
-        {{-- Navbar --}}
-        @include('partials.header')
+        <div class="container-fluid px-0">
 
-        {{-- Content --}}
-        <div class="container m-5">
+			<div class="row no-gutters">
 
-            @yield('content')
+				<div class="col-12">
 
-        </div>
+					{{-- Navbar --}}
+                    @include('partials.header')
+
+					{{-- Content --}}
+                    <div class="col-10 offset-1">
+
+                        @yield('content')
+            
+                    </div>
+
+				</div>
+
+			</div>
+
+		</div>
         
     </body>
 
