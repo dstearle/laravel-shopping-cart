@@ -16,7 +16,7 @@
 			{{-- Foreach loop for individual product items --}}
 			@foreach($productChunk as $product)
 
-				<div class="col-sm-6 col-md-4">
+				<div class="col-12 my-3 col-sm-6 col-md-4">
 
 					<div class="card">
 
