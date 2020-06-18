@@ -23,7 +23,7 @@
 						<div class="card-body">
 
 							{{-- Image --}}
-							<div class="row thumbnail">
+							<div class="row thumbnail mb-3">
 
 								<img 
 									class="img-responsive mx-auto" 
