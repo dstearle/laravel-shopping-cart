@@ -8,6 +8,25 @@
 
 @section('content')
 
+	{{-- Success Alert --}}
+	@if(Session::has('success'))
+
+		<div class="row">
+
+			<div class="col-sm-6 col-md-4 offset-sm-4 offset-sm-3">
+
+				<div id="charge-message" class="alert alert-success">
+
+					{{ Session::get('success') }}
+
+				</div>
+
+			</div>
+
+		</div>
+
+	@endif
+
 	{{-- Foreach loop for returning three products at a time --}}
 	@foreach($products->chunk(3) as $productChunk)
 
