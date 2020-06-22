@@ -7,6 +7,7 @@ Use App\Product;
 use Illuminate\Http\Request;
 Use Session;
 use Stripe\Stripe;
+Use Stripe\Charge;
 
 class ProductController extends Controller
 {
@@ -102,10 +103,10 @@ class ProductController extends Controller
         // Stripe secret key
         Stripe::setApiKey('sk_test_FAdioes0P4qTZiWGjCpaVFNy00MfRtYPYq');
 
-        // Try's to create data object for Stripe to process
+        // Try's to create data object for Stripe to process for a charge
         try {
 
-            Stripe::create(
+            Charge::create(
                 
                 array(
                     'amount' => $cart->totalPrice * 100,
