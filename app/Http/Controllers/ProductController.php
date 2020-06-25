@@ -7,6 +7,7 @@ Use App\Product;
 Use App\Order;
 use Illuminate\Http\Request;
 Use Session;
+use Auth;
 use Stripe\Stripe;
 Use Stripe\Charge;
 
@@ -128,6 +129,9 @@ class ProductController extends Controller
             $order->name = $request->input('name');
             // Stripe payment id to be stored in database
             $order->payment_id = $charge->id;
+
+            // Saves the user's order to the database
+            Auth::user()->orders()->save($order);
 
         }
 
