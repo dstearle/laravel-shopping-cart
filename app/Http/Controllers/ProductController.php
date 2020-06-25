@@ -123,6 +123,11 @@ class ProductController extends Controller
             $order = new Order();
             // Serliazes the cart items to be stored in the database
             $order->cart = serialize($cart);
+            // Input fields to be stored in database
+            $order->address = $request->input('address');
+            $order->name = $request->input('name');
+            // Stripe payment id to be stored in database
+            $order->payment_id = $charge->id;
 
         }
 
