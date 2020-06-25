@@ -37,7 +37,7 @@
 
                             <label for="name">Name</label>
 
-                            <input type="text" id="name" class="form-control" required>
+                            <input type="text" id="name" class="form-control" name="name" required>
 
                         </div>
 
@@ -50,7 +50,7 @@
 
                             <label for="address">Address</label>
 
-                            <input type="text" id="address" class="form-control" required>
+                            <input type="text" id="address" class="form-control" name="address" required>
 
                         </div>
 
