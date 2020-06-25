@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 Use App\Cart;
 Use App\Product;
+Use App\Order;
 use Illuminate\Http\Request;
 Use Session;
 use Stripe\Stripe;
@@ -106,7 +107,8 @@ class ProductController extends Controller
         // Try's to create data object for Stripe to process for a charge
         try {
 
-            Charge::create(
+            // The charge
+            $charge = Charge::create(
                 
                 array(
                     'amount' => $cart->totalPrice * 100,
@@ -116,6 +118,11 @@ class ProductController extends Controller
                 )
             
             );
+
+            // Creates a new order to be stored in the database
+            $order = new Order();
+            // Serliazes the cart items to be stored in the database
+            $order->cart = serialize($cart);
 
         }
 
