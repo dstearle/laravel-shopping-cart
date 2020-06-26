@@ -52,6 +52,9 @@
                 {{ csrf_field() }}
 
             </form>
+
+            {{-- Link To Sign Up --}}
+            <p class="pt-3">Don't have an account? <a href="{{ route('user.signup') }}">Sign Up Here!</a></p>
             
         </div>
 
