@@ -6,6 +6,7 @@ use App\User;
 use Illuminate\Http\Request;
 
 use Auth;
+use Session;
 
 class UserController extends Controller
 {
@@ -36,6 +37,15 @@ class UserController extends Controller
 
         // Logs the user in once they have signed up
         Auth::login($user);
+
+        // Redirect to user chosen url
+        if(Session::has('oldUrl')) {
+
+            $oldUrl = Session::get('oldUrl');
+            Session::forget('oldUrl');
+            return redirect()->to($oldUrl);
+
+        }
 
         // Redirect new user to their profile
         return redirect()->route('user.profile');
