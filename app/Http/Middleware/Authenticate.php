@@ -15,7 +15,13 @@ class Authenticate extends Middleware
     protected function redirectTo($request)
     {
         if (! $request->expectsJson()) {
+
+            // If user was redirected to signup
+            Session::put('oldUrl', $request->url());
+
+            // Routes back to signin page
             return route('user.signin');
+            
         }
     }
 }
