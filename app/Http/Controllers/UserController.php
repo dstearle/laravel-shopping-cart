@@ -10,7 +10,7 @@ use Session;
 
 class UserController extends Controller
 {
-    // Sign Up Controls
+    // ******* Sign Up Controls *******
     
     public function getSignup() {
 
@@ -52,7 +52,7 @@ class UserController extends Controller
 
     }
 
-    // Sign In Controls
+    // ******* Sign In Controls *******
 
     public function getSignin() {
 
@@ -90,7 +90,7 @@ class UserController extends Controller
 
     }
 
-    // User Profile Controls
+    // ******* User Profile Controls *******
 
     public function getProfile() {
 
@@ -103,8 +103,8 @@ class UserController extends Controller
         // Logs the user out
         Auth::logout();
 
-        // Directs user back to landing page
-        return redirect()->back();
+        // Directs user back to signin page
+        return redirect()->route('user.signin');
 
     }
 
