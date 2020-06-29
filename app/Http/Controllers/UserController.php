@@ -61,6 +61,15 @@ class UserController extends Controller
         // Checks if credentials for signing in are correct
         if(Auth::attempt(['email' => $request->input('email'), 'password' => $request->input('password')])) {
 
+            // Redirect to user chosen url
+            if(Session::has('oldUrl')) {
+
+                $oldUrl = Session::get('oldUrl');
+                Session::forget('oldUrl');
+                return redirect()->to($oldUrl);
+
+            }
+
             // Directs user to profile if credentials are correct
             return redirect()->route('user.profile');
 
