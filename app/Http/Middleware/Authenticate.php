@@ -4,6 +4,8 @@ namespace App\Http\Middleware;
 
 use Illuminate\Auth\Middleware\Authenticate as Middleware;
 
+use Session;
+
 class Authenticate extends Middleware
 {
     /**
@@ -21,7 +23,7 @@ class Authenticate extends Middleware
 
             // Routes back to signin page
             return route('user.signin');
-            
+
         }
     }
 }
