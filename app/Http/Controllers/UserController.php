@@ -94,7 +94,19 @@ class UserController extends Controller
 
     public function getProfile() {
 
-        return view('user.profile');
+        // Fetches aall of the user's existing orders
+        $orders = Auth::user()->orders;
+
+        // Unserializes each order from the list
+        $orders->transform(function($order, $key){
+
+            $order->cart = unserialize($order->cart);
+
+            return $order;
+
+        });
+
+        return view('user.profile', ['orders'=> $orders]);
 
     }
 
