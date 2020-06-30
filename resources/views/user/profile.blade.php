@@ -11,24 +11,39 @@
 
             <hr>
 
-            {{-- Orders --}}
             <h2>Your Orders</h2>
 
-            <div class="card text-center">
+            {{-- Orders --}}
+            @foreach ($orders as $order)
+                
+                <div class="card text-center">
 
-                <div class="card-body">
+                    <div class="card-body">
 
-                    <ul class="list-group">
+                        <ul class="list-group">
 
-                        <li class="list-group-item">First item</li>
-                        
-                    </ul>
+                            {{-- Order Items --}}
+                            @foreach ($order->cart->items as $item)
+                                
+                                <li class="list-group-item">
+                                    
+                                    ${{ $item['price'] }}
+                                    {{ $item['item']['title'] }} | {{ $item['qty'] }} Units
+
+                                </li>
+
+                            @endforeach
+
+                        </ul>
+
+                    </div>
+
+                    {{-- Total Price --}}
+                    <div class="card-footer text-muted">Total Price: ${{ $order->cart->totalPrice }}</div>
 
                 </div>
 
-                <div class="card-footer text-muted">2 days ago</div>
-
-            </div>
+            @endforeach
             
         </div>
 
