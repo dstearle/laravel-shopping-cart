@@ -17,6 +17,12 @@ Route::get('/', [
     'as' => 'product.index'
 ]);
 
+// Getter for reduced cart inventory
+Route::get('/reduce/{id}', [
+    'uses' => 'ProductController@getReduceByOne',
+    'as' => 'product.reduceByOne'
+]);
+
 // Shopping Cart Page
 Route::get('/shopping-cart', [
     'uses' => 'ProductController@getCart',
