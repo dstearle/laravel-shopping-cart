@@ -56,4 +56,18 @@ class Cart
 
     }
 
+    // Method for removing a single item from the cart
+    public function reduceByOne($id) {
+
+        // Reduces item quantity by one
+        $this->items[$id]['qty']--;
+        // Reduces total price for that item by one unit price
+        $this->items[$id]['price'] -= $this->items[$id]['item']['price'];
+        // Reduces total quantity of cart by one
+        $this->totalQty--;
+        // Reduces total price of the order by one unit price
+        $this->totalPrice -= $this->items[$id]['item']['price'];
+
+    }
+
 }
