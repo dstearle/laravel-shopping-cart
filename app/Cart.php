@@ -68,6 +68,14 @@ class Cart
         // Reduces total price of the order by one unit price
         $this->totalPrice -= $this->items[$id]['item']['price'];
 
+        // Checks to see if item quantity is at zero
+        if($this->items[$id]['qty'] <= 0) {
+
+            // Removes the item from the cart
+            unset($this->items[$id]);
+
+        }
+
     }
 
 }
