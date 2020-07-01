@@ -43,15 +43,32 @@ class ProductController extends Controller
 
     }
 
-    // Getter for updated cart
+    // Getter for updated cart after removal of one unit of an item
     public function getReduceByOne($id) {
 
         // Oldcart if it exists, null if not applicable
         $oldCart = Session::has('cart') ? Session::get('cart') : null;
         // The new cart with previous oldCarts contents
         $cart = new Cart($oldCart);
-        // Reduces the cart inventory by one
+        // Reduces the cart inventory by one unit for an item
         $cart->reduceByOne($id);
+
+        // User session
+        Session::put('cart', $cart);
+
+        return redirect()->route('product.shopping-cart');
+
+    }
+
+    // Getter for updated cart after removal of an item
+    public function getRemoveItem($id) {
+
+        // Oldcart if it exists, null if not applicable
+        $oldCart = Session::has('cart') ? Session::get('cart') : null;
+        // The new cart with previous oldCarts contents
+        $cart = new Cart($oldCart);
+        // Removes the item from the cart entirely
+        $cart->removeItem($id);
 
         // User session
         Session::put('cart', $cart);
