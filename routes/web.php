@@ -23,6 +23,12 @@ Route::get('/reduce/{id}', [
     'as' => 'product.reduceByOne'
 ]);
 
+// Getter for removed item from cart inventory
+Route::get('/remove/{id}', [
+    'uses' => 'ProductController@getRemoveItem',
+    'as' => 'product.remove'
+]);
+
 // Shopping Cart Page
 Route::get('/shopping-cart', [
     'uses' => 'ProductController@getCart',
