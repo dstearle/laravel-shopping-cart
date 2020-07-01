@@ -78,4 +78,17 @@ class Cart
 
     }
 
+    // Method for removing an item entirely from the cart
+    public function removeItem($id) {
+
+        // Reduces total quantity to zero
+        $this->totalQty -= $this->items[$id]['qty'];
+        // Reduces total price of the order by the total unit price of an item
+        $this->totalPrice -= $this->items[$id]['price'];
+
+        // Removes the item from the cart
+        unset($this->items[$id]);
+
+    }
+
 }
