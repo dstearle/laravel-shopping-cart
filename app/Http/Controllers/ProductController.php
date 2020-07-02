@@ -53,8 +53,16 @@ class ProductController extends Controller
         // Reduces the cart inventory by one unit for an item
         $cart->reduceByOne($id);
 
-        // User session
-        Session::put('cart', $cart);
+        // If cart inventory is not empty
+        if(count($cart->items) > 0) {
+
+            // User session
+            Session::put('cart', $cart);
+
+        }
+
+        // Else end the session
+        else { Session::forget('cart'); }
 
         return redirect()->route('product.shopping-cart');
 
